@@ -1,0 +1,5 @@
+PoC:
+  DIR_NAME: ./pocs
+  TIMEOUT: 60
+  THREAD_NUM: 10
+  RETURN_REQ_RESP: False
