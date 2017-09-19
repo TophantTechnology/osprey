@@ -13,7 +13,7 @@ Osprey是一个可扩展的开源漏洞检测与利用框架(Python3开发)，�
 从Git上获取最新版本的osprey代码
 
 ``` bash
-$ git clone git@git.tophant.com:cody.shi/PoC-framework.git
+$ git clone https://github.com/TophantTechnology/osprey.git
 ```
 
 #### 最小化安装
