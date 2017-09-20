@@ -48,10 +48,7 @@ class MetinfoXRewriteurlSQLInjection(BasePoc):
 
     test_case = {
         'Need_fb': False,
-        'Vuln': ["http://122.10.33.113/",
-                 "http://122.10.28.91/",
-                 "http://122.10.40.114/",
-                 "http://123.57.21.100/"],    # 列表格式的测试URL
+        'Vuln': [],    # 列表格式的测试URL
         'Not_vuln': [],    # 同上
     }
 
