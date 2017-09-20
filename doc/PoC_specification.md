@@ -24,7 +24,7 @@ from utils import tree, highlight, req    # utils实现了一些常用函数，�
 from urllib.parse import urljoin          # 导入其他的脚本需要用到的模块
 
 
-POC_NAME = "MetinfoXRewriteurlSQLInjection"    # PoC脚本中实现的类名，TCC框架将根据POC_NAME去实例化类以达到调用的效果，因此类名应与该变量名保持相同
+POC_NAME = "MetinfoXRewriteurlSQLInjection"    # PoC脚本中实现的类名，osprey架将根据POC_NAME去实例化类以达到调用的效果，因此类名应与该变量名保持相同
 
 
 class MetinfoXRewriteurlSQLInjection(BasePoc):
@@ -56,7 +56,7 @@ class MetinfoXRewriteurlSQLInjection(BasePoc):
         }
     }
 
-    # scan_info信息可以保持默认，相关参数如target/mode/verbose在TCC框架中都可以通过命令行参数设置
+    # scan_info信息可以保持默认，相关参数如target/mode/verbose在osprey中都可以通过命令行参数设置
     scan_info = {
         'Target': '',    # 目标网站域名
         'Mode': 'verify',    # verify或exploit
@@ -108,7 +108,7 @@ class MetinfoXRewriteurlSQLInjection(BasePoc):
 
 ### osprey框架可用工具介绍
 
-在编写PoC脚本的过程中，可以使用其他的第三方模块，除了使用其他第三方模块和自己编写函数实现，osprey还提供了utils.py作为常用函数封装库，免去自己定义实现一些通用功能的，直接导入便可使用。
+在编写PoC脚本的过程中，推荐使用标准库实现，也可以使用其他的第三方模块，除了使用其他第三方模块和自己编写函数实现，osprey还提供了utils.py作为常用函数封装库，免去自己定义实现一些通用功能，直接导入便可使用。
 
 ```python
 from utils import *
@@ -140,13 +140,7 @@ get_scan_info(scan_info)    # 返回scan_info中的Target和Verbose数据
 
 isIP(target)    # 判断输入数据是否是IP
 
-req(url, method, **kwargs)    # 封装了requests模块的各种HTTP请求方法，参数传递同requests的使用一致
-
 get_html(url, **kwargs)    # 发起GET请求取回Response body，注意返回的数据格式为bytes类型
-
-get_blind_inject_url(task_id, param)    # 获取唯一标识检测目标的DNS域名
-
-get_blind_inject_result(inject_url)    # 获取盲注检测结果
 
 url_join(base, url)    # 对两个路径进行拼接
 
