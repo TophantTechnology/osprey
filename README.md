@@ -74,6 +74,8 @@ $ celery -A osprey-web.celery worker --concurrency=5 -Q poc-queue -n osprey.%h -
 
 要使用Osprey Web接口，请参考 [osprey-web接口使用说明文档](doc/web_api_tutorial.md)
 
+Osprey-鱼鹰交流群：483373752
+
 ### 参考链接
 
 - [Vulbox](https://www.vulbox.com/)
