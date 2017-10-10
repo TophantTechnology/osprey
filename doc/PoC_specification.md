@@ -2,7 +2,7 @@
 
 基于osprey编写PoC，需要遵循框架格式的约定。
 
-使用者可以编写更多的PoC来扩充osprey的安全能力，同时，漏洞盒子提供PoC接收平台，面向公众群体（白帽子/开发人员/安全研究人员/安全技术爱好者等）有偿接收PoC，欢迎前往 [```漏洞盒子PoC接收平台```](https://www.vulbox.com/poc/submit) 提交。
+使用者可以编写更多的PoC来扩充osprey的安全能力，同时，漏洞盒子提供PoC接收平台，面向公众群体（白帽子/开发人员/安全研究人员/安全技术爱好者等）有偿接收PoC，欢迎前往 [```漏洞盒子PoC接收平台```](https://www.vulbox.com/login/?from=/poc/submit) 提交。
 
 ### 从一个示例中学习编写osprey PoC
 
