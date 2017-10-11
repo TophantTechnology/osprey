@@ -16,7 +16,7 @@ Osprey是一个可扩展的开源漏洞检测与利用框架(Python3开发)，�
 $ git clone https://github.com/TophantTechnology/osprey.git
 ```
 
-推荐使用virtualenv搭建独立的python3环境
+推荐在Linux环境下使用，并用virtualenv搭建独立的python3环境
 ``` bash
 $ python3 -m venv venv
 $ source venv/bin/activate
