@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Osprey-Web</title>
+</head>
+<body>
+<h2>welcome to Osprey Web</h2>
+<h3>使用方法</h3>
+<h5>任务下发</h5>
+<ul>
+    <li>url: /api/start</li>
+    <li>method: POST</li>
+    <li>type: JSON</li>
+    <li>param: task_id, target, vid</li>
+    <li>example: curl http://127.0.0.1:5000/api/start -d '{"task_id": "11111111111", "vid": "vb_xxxx_yyyy", "target": "http://x.com/"}'</li>
+</ul>
+<h5>获取结果</h5>
+<ul>
+    <li>url: /api/result</li>
+    <li>method: POST</li>
+    <li>type: JSON</li>
+    <li>param: task_id</li>
+    <li>example: curl http://127.0.0.1:5000/api/result -d '{"task_id": "11111111111"}'</li>
+</ul>
+</body>
+</html>

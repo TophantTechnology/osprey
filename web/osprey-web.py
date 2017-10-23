@@ -2,7 +2,7 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 from celery import Celery
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, redirect, url_for
 from core.PocManager import PoCManager
 from settings import API_HOST, API_PORT, CELERY_BROKER
 from web.check import check_task_id
@@ -10,13 +10,13 @@ from web.task import start_poc_task
 os.chdir("../")
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="{}/web/static".format(os.getcwd()))
 celery = Celery("PoC-framework", broker=CELERY_BROKER)
 
 
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
+def index():
+    return redirect(url_for("static", filename="index.html"))
 
 
 @app.route('/api/start', methods=["POST"])
