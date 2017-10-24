@@ -1,0 +1,21 @@
+version: '2'
+services:
+  rabbitmq:
+    image: rabbitmq:latest
+    hostname: rabbit
+    environment:
+        - RABBITMQ_DEFAULT_USER=osprey
+        - RABBITMQ_DEFAULT_PASS=osprey
+  mongo:
+    image: mongo:latest
+    hostname: mongo
+  osprey:
+    image: tophant/osprey
+    volumes:
+      - ../pocs:/opt/osprey/pocs
+    links:
+     - rabbitmq
+     - mongo
+    command: docker/start-osprey.sh
+    ports:
+     - "5000:5000"
