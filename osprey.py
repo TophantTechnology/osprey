@@ -17,7 +17,7 @@ def main():
 
 
 def init_signal():
-    # os.setpgrp()
+    os.setpgrp()
     signal.signal(
         signal.SIGTERM,
         lambda *_: os.kill(0, signal.SIGKILL))
