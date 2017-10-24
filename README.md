@@ -93,7 +93,7 @@ $ docker-compose up -d
 
 访问`http://YOUR-IP:5000/`，可以看到osprey Web部署已完成
 
-![](osprey-web.png)
+![](docker/osprey-web.png)
 
 利用docker搭建osprey的Web接口下发任务和获取执行结果
 
