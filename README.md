@@ -74,6 +74,40 @@ $ gunicorn -b 127.0.0.1:5000 osprey-web:app -w 5
 $ celery -A osprey-web.celery worker --concurrency=5 -Q poc-queue -n osprey.%h -Ofair
 ```
 
+### Docker使用
+
+可以使用docker-compose快速搭建完整的Osprey环境（需安装docker和docker-compose）
+
+编译docker环境
+
+``` bash
+$ cd docker
+$ docker-compose build
+```
+
+运行完整的osprey环境
+
+``` bash
+$ docker-compose up -d
+```
+
+访问`http://YOUR-IP:5000/`，可以看到osprey Web部署已完成
+
+![](osprey-web.png)
+
+利用docker搭建osprey的Web接口下发任务和获取执行结果
+
+``` bash
+$ curl http://127.0.0.1:5000/api/start -d '{"task_id": "TASK_ID", "vid": "vb_ID", "target": "http://x.com/"}'
+$ curl http://127.0.0.1:5000/api/result -d '{"task_id": "TASK_ID"}'
+```
+
+osprey镜像拉取到本地之后，也可以直接通过docker run进入容器中（不启用osprey-web），然后使用命令行工具或交互式Console接口
+
+``` bash
+$ docker run -it -v pocs:/opt/osprey/pocs docker_osprey bash
+```
+
 ### 相关文档
 
 基于Osprey编写PoC，请参考 [osprey编写规范和要求说明](doc/PoC_specification.md)
