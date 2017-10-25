@@ -105,7 +105,7 @@ $ curl http://127.0.0.1:5000/api/result -d '{"task_id": "TASK_ID"}'
 osprey镜像拉取到本地之后，也可以直接通过docker run进入容器中（不启用osprey-web），然后使用命令行工具或交互式Console接口
 
 ``` bash
-$ docker run -it -v pocs:/opt/osprey/pocs docker_osprey bash
+$ docker run -it -v pocs:/opt/osprey/pocs tophant/osprey bash
 ```
 
 ### 相关文档
