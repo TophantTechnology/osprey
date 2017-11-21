@@ -9,7 +9,6 @@ from settings import save_http_dump, req_timeout
 
 
 urllib3.disable_warnings()
-db = DBClient()
 PROXIES_DICT = ""
 
 
@@ -43,6 +42,7 @@ def response_dump(resp):
     if not data.get("response", ""):
         data["response"] = str(dump_data)
     response = data.pop("response")
+    db = DBClient()
     db.save_response(data, response)
 
 
