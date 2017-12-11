@@ -59,12 +59,9 @@ def get_result():
     if not results:
         return jsonify(status=400, message="Task no found.")
     else:
-        results_data = results.get("data", "")
-        if results_data:
-            if not isinstance(results_data, dict):
-                return jsonify(status=201, message=results_data)
-            else:
-                return jsonify(results_data)
+        results_Success = list(results.values())[0]['scan_info'][0]['Success']
+        if results_Success:
+            return jsonify(results)
         else:
             return jsonify(status=201, message="not vuln")
 
