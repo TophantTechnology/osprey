@@ -1,7 +1,7 @@
 import os
 import signal
 from gevent import monkey
-from pprint import pprint
+monkey.patch_all()
 from core.PocManager import PoCManager
 from lib.core.cmdparser import cmdline_parse
 from lib.log import logger as log
@@ -9,7 +9,6 @@ from lib.core.prepare import prepare
 
 
 def main():
-    monkey.patch_all()
     init_signal()
     options, args = cmdline_parse()
     fb = prepare(options)
