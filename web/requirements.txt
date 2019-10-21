@@ -20,4 +20,4 @@ PyYAML==3.12
 requests==2.18.1
 urllib3==1.21.1
 vine==1.1.4
-Werkzeug==0.12.2
+Werkzeug==0.15.3
