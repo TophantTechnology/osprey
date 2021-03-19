@@ -10,7 +10,7 @@ greenlet==0.4.12
 gunicorn==19.7.1
 idna==2.5
 itsdangerous==0.24
-Jinja2==2.9.6
+Jinja2==2.11.3
 kombu==4.1.0
 MarkupSafe==1.0
 psutil==5.2.2
