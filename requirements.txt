@@ -6,4 +6,4 @@ idna==2.5
 pymongo==3.4.0
 PyYAML==3.12
 requests==2.18.1
-urllib3==1.21.1
+urllib3==1.26.5
