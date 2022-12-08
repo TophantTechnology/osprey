@@ -1,4 +1,4 @@
-certifi==2017.4.17
+certifi==2022.12.7
 chardet==3.0.4
 gevent==1.2.2
 greenlet==0.4.12
